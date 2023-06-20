@@ -4,15 +4,21 @@ An implementation of the Zarf [DOS Games/Retro Arcade](https://docs.zarf.dev/exa
 
 ## Making a Bundle
 
+To create the `bundle.tar.gz` you need to have the following:
+
+1. `skopeo` and `hoppr` installed
+
+Then you can run the following:
+
 ```
 hopctl bundle hoppr-manifest.yaml -t hoppr-transfers.yaml
 ```
 
 > :warning: NOTE: normally Hoppr manifests are `manifest.yaml` and Hoppr transfers are `transfer.yaml` - this repo uses different names to distinguish them as hoppr-specific files.
 
-# Deploying DOS Games
+## Deploying DOS Games
 
-To deploy you need to have the following:
+To deploy `dos-games` you need to have the following:
 
 1. The bundle created in the root of the project with the name of `bundle.tar.gz`
 2. An available image registry and k8s cluster

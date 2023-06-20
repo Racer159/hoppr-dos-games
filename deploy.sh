@@ -22,9 +22,9 @@ tar -xvf bundle.tar.gz -C bundle
 echo "fba6c062e754a120bc8105cde1344de200452fe014a8759e06e4eec7ed258a09 bundle/generic/https%3A%2F%2Fdl.k8s.io/release/v1.27.3/bin/linux/amd64/kubectl" | sha256sum --check
 
 # Load and push the image to the correct repository
-# docker load --input bundle/docker/https%3A%2F%2Fdocker.io/defenseunicorns/zarf-game_multi-tile-dark
-# docker tag sha256:be9619e8e2570e0012bd9e71cb3dfcef65ce33b443dcca525de20b4cabad04cd $1/zarf-game:multi-tile-dark
-# docker push $1/zarf-game:multi-tile-dark
+docker load --input bundle/docker/https%3A%2F%2Fdocker.io/defenseunicorns/zarf-game_multi-tile-dark
+docker tag sha256:be9619e8e2570e0012bd9e71cb3dfcef65ce33b443dcca525de20b4cabad04cd $1/zarf-game:multi-tile-dark
+docker push $1/zarf-game:multi-tile-dark
 
 # Replace the online registry with the offline registry
 awk "{gsub(/defenseunicorns\\/zarf-game:multi-tile-dark/, \"$1/zarf-game:multi-tile-dark\")} 1" bundle/generic/https%3A%2F%2Fraw.githubusercontent.com%2Fdefenseunicorns%2Fzarf%2Fmain/examples/dos-games/manifests/deployment.yaml > tmp && mv tmp bundle/generic/https%3A%2F%2Fraw.githubusercontent.com%2Fdefenseunicorns%2Fzarf%2Fmain/examples/dos-games/manifests/deployment.yaml
