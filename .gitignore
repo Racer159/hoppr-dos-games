@@ -1,0 +1,4 @@
+report/
+*.log
+*.tar.gz
+*.tar.zst

@@ -1,0 +1,23 @@
+schemaVersion: v1
+kind: Manifest
+
+metadata:
+  name: "DOS Games"
+  version: 0.1.0
+  description: "A Hoppr manifest of the Zarf dos-games example"
+
+sboms:
+  - local: hoppr-sbom.json
+
+includes: []
+
+repositories:
+  generic:
+  - url:
+      url: https://raw.githubusercontent.com/defenseunicorns/zarf/main
+  docker:
+  - url:
+      url: https://docker.io
+  git:
+  - url:
+      url: https://github.com

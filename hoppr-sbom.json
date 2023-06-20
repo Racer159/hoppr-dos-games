@@ -1,0 +1,23 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.4",
+    "version": 1,
+    "components": [
+        {
+            "type": "library",
+            "name": "deployment.yaml",
+            "purl": "pkg:generic/examples/dos-games/manifests/deployment.yaml"
+        },
+        {
+            "type": "library",
+            "name": "service.yaml",
+            "purl": "pkg:generic/examples/dos-games/manifests/service.yaml"
+        },
+        {
+            "type": "library",
+            "name": "dos-games",
+            "version": "multi-tile-dark",
+            "purl": "pkg:docker/defenseunicorns/zarf-game@multi-tile-dark"
+        }
+     ]
+}
