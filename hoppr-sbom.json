@@ -15,6 +15,11 @@
         },
         {
             "type": "library",
+            "name": "kubectl",
+            "purl": "pkg:generic/release/v1.27.3/bin/linux/amd64/kubectl"
+        },
+        {
+            "type": "library",
             "name": "dos-games",
             "version": "multi-tile-dark",
             "purl": "pkg:docker/defenseunicorns/zarf-game@multi-tile-dark"

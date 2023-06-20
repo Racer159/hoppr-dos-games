@@ -15,9 +15,8 @@ repositories:
   generic:
   - url:
       url: https://raw.githubusercontent.com/defenseunicorns/zarf/main
+  - url:
+      url: https://dl.k8s.io
   docker:
   - url:
       url: https://docker.io
-  git:
-  - url:
-      url: https://github.com

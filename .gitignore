@@ -1,4 +1,5 @@
 report/
+bundle/
 *.log
 *.tar.gz
 *.tar.zst
